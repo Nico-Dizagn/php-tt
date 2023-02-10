@@ -1,0 +1,14 @@
+{
+    "name": "nico-dizagn/php-tt",
+    "description": "PHP Test technique",
+    "type": "project",
+    "require": {
+        "php": "7.*"
+    },
+    "authors": [
+        {
+            "name": "Nicolas N."
+        }
+    ],
+    "minimum-stability": "stable"    
+}

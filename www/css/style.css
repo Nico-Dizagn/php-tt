@@ -1,0 +1,18 @@
+/**
+* Cascaded Style Sheet
+*/
+body{
+    background-color:#EEEEEE;
+    color:#333;
+
+}
+
+
+
+div{
+    margin:1em 0em;
+}
+
+form{
+    border: 1px solid #FFF;
+}
