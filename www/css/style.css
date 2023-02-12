@@ -12,6 +12,10 @@ body{
     width: 80%;
     margin: auto;
 }
+#intro{
+    margin-bottom: 3em;
+    font-size: 1.2em;
+}
 div{
     margin:1em 0em;
 }
@@ -25,8 +29,25 @@ legend{
     color: greenyellow;
     padding: 0 1em;
 }
+#result{
+    border:2px solid #f4511e;
+    font-size: 1.4em;
+    padding-top:1em;
+    color:#f4511e;
+}
+#result legend{
+    font-size: 1.3em;
+    color:#f4511e;
+}
+#score{
+    font-weight: bolder;
+    color:#CCC;
+}
 
-/** Checkbox */
+/** 
+* https://www.w3schools.com/howto/
+* Checkbox
+*/
 .answer{
     display: block;
     position: relative;
