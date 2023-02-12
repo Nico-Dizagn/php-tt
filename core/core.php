@@ -17,6 +17,10 @@ class tinyMVC{
      * Design Pattern #1
      */
     private function __construct(){}
+
+    /**
+     * Design Pattern #1
+     */
     public static function instance(){        
         if (TRUE == isset(self::$m_oInstance)){
             return self::$m_oInstance ;

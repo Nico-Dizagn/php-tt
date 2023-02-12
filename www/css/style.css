@@ -2,17 +2,129 @@
 * Cascaded Style Sheet
 */
 body{
-    background-color:#EEEEEE;
-    color:#333;
-
+    background-color:#333;
+    color:#CCC;
+    margin: 2em 3em;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-
+#main{
+    width: 80%;
+    margin: auto;
+}
 div{
     margin:1em 0em;
 }
+fieldset{
+    border: 1px dotted greenyellow;
+    padding: 0 2em 1em;
+    margin-top: 2em;
+}
+legend{
+    font-weight: bolder;
+    color: greenyellow;
+    padding: 0 1em;
+}
 
-form{
-    border: 1px solid #FFF;
+/** Checkbox */
+.answer{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0.8em;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.answer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #CCC;
+    border-radius: 0.2em;
+  }
+.answer:hover input ~ .checkmark {
+    background-color: grey;
+}
+.answer input:checked ~ .checkmark {
+    background-color: greenyellow;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.answer input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+/* Style the checkmark/indicator */
+.answer .checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid black;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+/**
+* 
+*/
+#submit{
+    text-align: center;
+}
+.button {
+    border-radius: 0.4em;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.8em;
+    /*width: 200px;*/
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0.25em;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -1em;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 1.5em;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
 }

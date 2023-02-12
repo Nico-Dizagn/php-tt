@@ -10,20 +10,16 @@
     public function __construct(){
         // 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
-
-
             $this->m_sStep = 2 ;
         }
-
-    }
-
-    // Model 
-    protected function model(){
-
     }
 
     // View
     public function __toString(){
+
+        // model
+        require_once('../model/form.php');
+        $l_iQNum = 0;
         $l_sString =  
 '<html>
         <head>
@@ -32,41 +28,47 @@
             <script src="js/script.js"></script>
         </head>
     <body>
-        <h1>Test technique '.date('Y').'</h1>
-        <div>Bonjour et bienvenue sur ce test technique PHP tout niveaux.</div>
-        <div>Plusieurs compétences vont etre testés dans un tronc commun PHP, puis par spécialités (CMS, Framework, Pattern, etc)</div>
+    <div id="main">
+        <h1>Technical test PHP '.date('Y').'</h1>
+        <div>Welcome to this PHP technical test for developers of all levels. <br/>Several skills will be tested in a common PHP core. Multiple answers allowed for each question.</div>
         ';
-        if($this->m_sStep == 1){
+        if($this->m_sStep == 2){
+            var_dump($_POST);
+        }
+
         $l_sString .=
-        '<form action="" method="POST">
+        '<form action="" method="POST">';
+        foreach($l_aForm AS $l_aQuestion){
+            $l_sString .='
             <div class="question">
                 <fieldset>
-                    <legend>Question 1</legend>                    
-                    <p> Dans cet exemple que signifie le "!"
-                    </p>
-                    <p><input type="checkbox" id="q1a" name="q1a" value="a"/><label for="q1a">Réponse A</label></p>
-                    <p><input type="checkbox" id="q1b" name="q1b" value="b"/><label for="q1b">Réponse B</label></p>
+                    <legend>#'.++$l_iQNum.' - '.$l_aQuestion['title'].'</legend>                    
+                    <p class="desc"> '.$l_aQuestion['desc'].'</p>';
+                    foreach($l_aQuestion['answer'] AS $l_sId => $l_aAnswer){
+                        $l_sString .='
+                    <label class="answer">
+                        <input type="checkbox" 
+                                id="'.$l_sId.'" 
+                                name="'.$l_sId.'" 
+                                value="'.$l_sId.'"/>
+                        <span class="checkmark"></span>        
+                        '.htmlentities($l_aAnswer['label']).'
+                    </label>';
+                    }
+            $l_sString .='
                 </fieldset>
-            </div>
-            <div class="question">
-                <div>
-                    Ma deuxieme question
-                </div>
-                <p><input type="checkbox" id="q2a" name="q2a" value="a"/><label for="q2a">Réponse A</label></p>
-                <p><input type="checkbox" id="q2b" name="q2b" value="b"/><label for="q2b">Réponse B</label></p>
-                <p><input type="checkbox" id="q2c" name="q2c" value="c"/><label for="q2C">Réponse C</label></p>
-            </div>
-            <div>
-                <input type="submit" value="Valider"/>
-            </div>
-        </form>';
+            </div>' ;
         }
-
-        if($this->m_sStep == 2){
-
-        }
-
-        $l_sString .='</body>
+        
+        $l_sString .= '
+            <div id="submit">
+                <button class="button">
+                    <span>Evaluer mes réponses </span>
+                </button>
+            </div>
+        </form>
+    </div>
+    </body>
 </html>' ;
 
         return $l_sString;
