@@ -351,6 +351,32 @@ echo $apples;</pre>',
                         'valid' => false
                     )
                 )
+            ),
+            'q12' => array(
+                'title' => 'Which problem "namespaces" are designed to solved ?',
+                'desc' => '',
+                'answer' => array(
+                    'q12a' => array(
+                        'label' => 'Improve performance of class/function/constants',
+                        'valid' => false
+                    ),
+                    'q12b' => array(
+                        'label' => 'Improve security of class/function/constants',
+                        'valid' => false
+                    ),
+                    'q12c' => array(
+                        'label' => 'Avoid collisions between code you create, internal or third parties code',
+                        'valid' => true
+                    ),
+                    'q12d' => array(
+                        'label' => 'Replace usage of autoload and spl_autoload functions',
+                        'valid' => false
+                    ),
+                    'q12e' => array(
+                        'label' => 'Ability to shorten long names and improve readibility',
+                        'valid' => true
+                    )
+                )
             ) 
         );
     }
