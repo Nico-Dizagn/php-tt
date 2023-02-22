@@ -14,8 +14,10 @@
         
         // 
         if($_SERVER['REQUEST_METHOD'] == "POST"){
-            $this->m_oForm->checkForm();
-            $this->m_sStep = 2 ;
+            if(TRUE == $this->m_oForm->checkForm()){
+                $this->m_oForm->score();
+                $this->m_sStep = 2 ;
+            }
         }
     }
 
@@ -43,7 +45,8 @@
             $l_sString .= '
         <fieldset id="result">
             <legend>Result</legend>
-            Total score : <span id="score">'.$this->m_oForm->m_iScore.' / 20</span> ( Right : '.$this->m_oForm->m_iRight.' / Wrong : '.$this->m_oForm->m_iWrong.' ) 
+            <p>Total score : <span id="score">'.$this->m_oForm->m_aScore['global'].' / 20</span></p>
+            <p>(Score pondéré : '.$this->m_oForm->m_aScore['weighted'].'/20 - Right : '.$this->m_oForm->m_iRight.'/'.$this->m_oForm->m_iTotal.'('.$this->m_oForm->m_aScore['percentRight'].'%) - Wrong : '.$this->m_oForm->m_iWrong.' ) 
         </fieldset>' ;
         }
 

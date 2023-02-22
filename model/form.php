@@ -1,11 +1,14 @@
 <?php 
 class form{
+    const LEVEL_JUNIOR = 1;
+    const LEVEL_SENIOR = 2;
+    const LEVEL_EXPERT = 3;
 
-    // counters
-    public $m_iScore = 0;
+    public $m_aScore = 0;
     public $m_iRight = 0;
     public $m_iWrong = 0;
     public $m_iTotal = 0;
+    public $m_iTotalWrong = 0;
 
     public function checkForm(){
         $l_aQuestion = $this->getForm();
@@ -17,16 +20,31 @@ class form{
                         $this->m_iRight++ ;
                     } 
                 }else{
+                    $this->m_iTotalWrong++;
                     if(TRUE == in_array($l_sQId,$_POST )){
                         $this->m_iWrong++ ;
                     } 
                 }
             }
         }
-        // Result
-        $this->m_iScore = round((($this->m_iRight-($this->m_iWrong/2))*20)/$this->m_iTotal,2) ;
-        $this->m_iScore = ($this->m_iScore < 0) ? 0 : $this->m_iScore ;
         return true ;
+    }
+
+    public function score($p_iLevel=1){
+
+        if(self::LEVEL_JUNIOR == $p_iLevel){
+            $l_iTmpG = round((($this->m_iRight)*20)/$this->m_iTotal,2) ;
+            $l_iTmpG = ($l_iTmpG < 0) ? 0 : $l_iTmpG ;
+            $l_iTmpW = round((($this->m_iRight-($this->m_iWrong/2))*20)/$this->m_iTotal,2) ;
+            $l_iTmpW = ($l_iTmpW < 0) ? 0 : $l_iTmpW ;
+        }
+
+        $l_sP100Right = round((($this->m_iRight)*100)/$this->m_iTotal,0) ;
+             
+        
+        return $this->m_aScore = array('global' => $l_iTmpG, 
+                                       'weighted' => $l_iTmpW,
+                                       'percentRight'=> $l_sP100Right) ;
     }
 
     public function getForm(){
@@ -196,11 +214,11 @@ echo $apples;</pre>',
                         'valid' => false
                     ),
                     'q6b' => array(
-                        'label' => 'Filtering Output used in form data',
+                        'label' => 'Filtering Output used only in form data',
                         'valid' => false
                     ),
                     'q6c' => array(
-                        'label' => 'Filtering Output used in database transactions',
+                        'label' => 'Filtering only input inserted in database transactions',
                         'valid' => false
                     ),
                     'q6d' => array(
@@ -245,7 +263,7 @@ echo $apples;</pre>',
                 )
             ),
             'q8' => array(
-                'title' => 'Which of the following list of potential data sources should be considered trusted ?',
+                'title' => 'Which one in the following list of potential data sources come from the server side ?',
                 'desc' => '',
                 'answer' => array(
                     'q8a' => array(
@@ -265,7 +283,7 @@ echo $apples;</pre>',
                         'valid' => true
                     ),
                     'q8e' => array(
-                        'label' => 'None of the above',
+                        'label' => '$_PHP',
                         'valid' => false
                     )
                 )
