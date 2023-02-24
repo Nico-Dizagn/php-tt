@@ -16,10 +16,10 @@
 $l_sString =          
 '<html>
         <head>
-            <title>Test technique Drupal</title>
+            <title>Test technique symfony</title>
         </head>
     <body>
-        Hello Drupal
+        Hello symfony
     </body>
 </html>' ;
 

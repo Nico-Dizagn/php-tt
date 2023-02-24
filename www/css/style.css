@@ -2,16 +2,22 @@
 * Cascaded Style Sheet
 */
 body{
-    background-color:#333;
-    color:#CCC;
+    color:#555;
     margin: 2em 3em;
-    font-size: 20px;
+    font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: linear-gradient(#222, #555) ;
+    /*background-image: url(../img/bg.jpeg);*/
+    background-color: #aacfb4;
+    margin:0;
+    padding:1em;
 }
 #main{
-    width: 80%;
+    width: 70%;
     margin: auto;
+    background-color: #dadada;    
+    padding:2em;
+    border-radius: 1em;
+    border:0.3em solid #f2f2f2;
 }
 #intro{
     margin-bottom: 3em;
@@ -20,35 +26,52 @@ body{
 div{
     margin:1em 0em;
 }
-fieldset{
-    border: 1px dotted greenyellow;
+fieldset, #result{
+    border: 1px dotted rgb(0, 108, 150);
     padding: 0 2em 1em;
     margin-top: 2em;
 }
 legend{
     font-weight: bolder;
-    color: greenyellow;
+    color: rgb(0, 108, 150);
     padding: 0 1em;
 }
 #result{
-    border:2px solid #f4511e;
-    font-size: 1.4em;
-    padding-top:1em;
-    color:#f4511e;
-}
-#result legend{
-    font-size: 1.3em;
-    color:#f4511e;
+    background-color: rgb(0, 108, 150);
+    border-radius: 0.7em;
+    color:#FFF;
+    font-size: 1.1em;
 }
 #score{
     font-weight: bolder;
-    color:#CCC;
+    color:#FFF;
+    font-size: 1.3em;
+}
+#score2{
+    font-weight: bolder;
+    color:#FFF;
+}
+.question{
+    clear: left;
+}
+.right{
+    color:rgb(1, 115, 1);
+    font-weight: bold;
+}
+.wrong{
+    color:rgba(255, 55, 0, 0.929);
+    text-decoration: line-through;
 }
 
 /** 
 * https://www.w3schools.com/howto/
-* Checkbox
+* Checkbox / Radio
 */
+.level{
+    float:left;
+    margin-right:3em;
+    padding-bottom:3em;
+}
 .answer{
     display: block;
     position: relative;
@@ -74,14 +97,15 @@ legend{
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #CCC;
+    background-color: #FFF;
     border-radius: 0.2em;
+    border: 1px solid rgb(0, 108, 150);;
   }
 .answer:hover input ~ .checkmark {
-    background-color: grey;
+    background-color: rgb(177, 233, 255);
 }
 .answer input:checked ~ .checkmark {
-    background-color: greenyellow;
+    background-color: rgb(0, 108, 150);
 }
 .checkmark:after {
     content: "";
@@ -99,7 +123,7 @@ left: 9px;
 top: 5px;
 width: 5px;
 height: 10px;
-border: solid black;
+border: solid rgb(201, 245, 255);
 border-width: 0 3px 3px 0;
 -webkit-transform: rotate(45deg);
 -ms-transform: rotate(45deg);
@@ -114,7 +138,7 @@ transform: rotate(45deg);
 }
 .button {
     border-radius: 0.4em;
-    background-color: #f4511e;
+    background-color: rgb(0, 108, 150);
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -124,6 +148,11 @@ transform: rotate(45deg);
     transition: all 0.5s;
     cursor: pointer;
     margin: 0.25em;
+}
+.reveals{
+    background-color: #FFF;
+    color:rgb(0, 108, 150);
+    padding: 0.3em 0.5em;
 }
 
 .button span {

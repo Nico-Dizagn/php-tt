@@ -33,9 +33,23 @@ class form{
     public function score($p_iLevel=1){
 
         if(self::LEVEL_JUNIOR == $p_iLevel){
-            $l_iTmpG = round((($this->m_iRight)*20)/$this->m_iTotal,2) ;
+            $l_iTmpG = round((($this->m_iRight)*20)/$this->m_iTotal,1) ;
             $l_iTmpG = ($l_iTmpG < 0) ? 0 : $l_iTmpG ;
-            $l_iTmpW = round((($this->m_iRight-($this->m_iWrong/2))*20)/$this->m_iTotal,2) ;
+            $l_iTmpW = round((($this->m_iRight-($this->m_iWrong/4))*20)/$this->m_iTotal,1) ;
+            $l_iTmpW = ($l_iTmpW < 0) ? 0 : $l_iTmpW ;
+        }
+
+        if(self::LEVEL_SENIOR == $p_iLevel){
+            $l_iTmpG = round((($this->m_iRight)*20)/$this->m_iTotal,1) ;
+            $l_iTmpG = ($l_iTmpG < 0) ? 0 : $l_iTmpG ;
+            $l_iTmpW = round((($this->m_iRight-($this->m_iWrong/2))*20)/$this->m_iTotal,1) ;
+            $l_iTmpW = ($l_iTmpW < 0) ? 0 : $l_iTmpW ;
+        }
+
+        if(self::LEVEL_EXPERT == $p_iLevel){
+            $l_iTmpG = round((($this->m_iRight)*20)/$this->m_iTotal,1) ;
+            $l_iTmpG = ($l_iTmpG < 0) ? 0 : $l_iTmpG ;
+            $l_iTmpW = round((($this->m_iRight-($this->m_iWrong/1))*20)/$this->m_iTotal,1) ;
             $l_iTmpW = ($l_iTmpW < 0) ? 0 : $l_iTmpW ;
         }
 
@@ -47,7 +61,20 @@ class form{
                                        'percentRight'=> $l_sP100Right) ;
     }
 
+    /**
+     * @todo : replace this hardcoded method by a API call with guzzle lib (already installed)
+     * ****
+     * API specification 
+     *
+     * @url https://php-tt.siaxp.com/fakeapi/getFormContent.php 
+     * @return JSON form content 
+     * 
+     * ****
+     * Guzzle doc 
+     * https://docs.guzzlephp.org/en/stable/quickstart.html
+     */
     public function getForm(){
+        // @todo : The array below must be replaced by an API call with guzzle
         return array(
             'q0' => array(
                 'title' => 'Which of the following tags are an acceptable way to begin a PHP Code block ?',

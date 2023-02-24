@@ -16,10 +16,10 @@
 $l_sString =          
 '<html>
         <head>
-            <title>Test technique Drupal</title>
+            <title>Test technique prestashop</title>
         </head>
     <body>
-        Hello Drupal
+        Hello Prestashop
     </body>
 </html>' ;
 
