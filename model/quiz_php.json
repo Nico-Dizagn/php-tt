@@ -1,0 +1,172 @@
+{
+  "q0": {
+    "title": "Which of the following tags are an acceptable way to begin a PHP Code block ?",
+    "desc": "",
+    "answer": {
+      "q0a": { "label": "<script language=\"php\">", "valid": false },
+      "q0b": { "label": "<!", "valid": false },
+      "q0c": { "label": "<%", "valid": false },
+      "q0d": { "label": "<?", "valid": true },
+      "q0e": { "label": "<?php", "valid": true }
+    }
+  },
+  "q1": {
+    "title": "What is the ouput of the PHP code below ? ",
+    "desc": "<pre>\nfunction apple($apples = 4){\n$apples = $apples / 2;\nreturn $apples;\n}\n$apples = 10;\napple($apples);\necho $apples;</pre>",
+    "answer": {
+      "q1a": { "label": "2", "valid": false },
+      "q1b": { "label": "4", "valid": false },
+      "q1c": { "label": "5", "valid": false },
+      "q1d": { "label": "10", "valid": true }
+    }
+  },
+  "q2": {
+    "title": "Which one line comment syntax are valid in PHP ?",
+    "desc": "",
+    "answer": {
+      "q2a": { "label": "// This is a comment", "valid": true },
+      "q2b": { "label": "//-- this is a comment --//", "valid": true },
+      "q2c": { "label": "/* This is a comment", "valid": false },
+      "q2d": { "label": "<!-- This is a comment -->", "valid": false },
+      "q2e": { "label": "# This is a comment ", "valid": true }
+    }
+  },
+  "q3": {
+    "title": "When checking to see if two variables contain the same instance of an object, which of the following\n        comparisons should be used ?",
+    "desc": "",
+    "answer": {
+      "q3a": {
+        "label": "if($obj1->equals($obj2) && ($obj1 instanceof $obj2))",
+        "valid": false
+      },
+      "q3b": { "label": "if($obj1->equals($obj2))", "valid": false },
+      "q3c": { "label": "if($obj1 === $obj2)", "valid": true },
+      "q3d": { "label": "if($obj1 instanceof $obj2)", "valid": false },
+      "q3e": { "label": "if($obj1 == $obj2)", "valid": true }
+    }
+  },
+  "q4": {
+    "title": "Which method will be called automatically when an object is represented as a string ?",
+    "desc": "",
+    "answer": {
+      "q4a": { "label": "getString()", "valid": false },
+      "q4b": { "label": "__get()", "valid": false },
+      "q4c": { "label": "__value()", "valid": false },
+      "q4d": { "label": "__toString()", "valid": true },
+      "q4e": { "label": "__getString()", "valid": false }
+    }
+  },
+  "q5": {
+    "title": "Where should indirectly executed PHP scripts (i.e. include files) be stored in the file system ?",
+    "desc": "",
+    "answer": {
+      "q5a": { "label": "Outside of the document root", "valid": true },
+      "q5b": { "label": "In the document root", "valid": false },
+      "q5c": { "label": "Anywhere you want", "valid": false },
+      "q5d": { "label": "In the database", "valid": false }
+    }
+  },
+  "q6": {
+    "title": "When attempting to prevent a cross-site scripting attack, which of the following is most important ?",
+    "desc": "",
+    "answer": {
+      "q6a": {
+        "label": "Not writing Javascript on the fly using PHP",
+        "valid": false
+      },
+      "q6b": {
+        "label": "Filtering Output used only in form data",
+        "valid": false
+      },
+      "q6c": {
+        "label": "Filtering only input inserted in database transactions",
+        "valid": false
+      },
+      "q6d": { "label": "Writing careful Javascript", "valid": false },
+      "q6e": { "label": "Filtering all input", "valid": false },
+      "q6f": { "label": "Filtering all output", "valid": true }
+    }
+  },
+  "q7": {
+    "title": "What are the three access modifiers that you can use in PHP objects ?",
+    "desc": "",
+    "answer": {
+      "q7a": { "label": "protected", "valid": true },
+      "q7b": { "label": "public", "valid": true },
+      "q7c": { "label": "static", "valid": false },
+      "q7d": { "label": "final", "valid": false },
+      "q7e": { "label": "private", "valid": true }
+    }
+  },
+  "q8": {
+    "title": "Which one in the following list of potential data sources come from the server side ?",
+    "desc": "",
+    "answer": {
+      "q8a": { "label": "$_ENV", "valid": true },
+      "q8b": { "label": "$_GET", "valid": false },
+      "q8c": { "label": "$_COOKIE", "valid": false },
+      "q8d": { "label": "$_SERVER", "valid": true },
+      "q8e": { "label": "$_PHP", "valid": false }
+    }
+  },
+  "q9": {
+    "title": "Which of the following aspects of the MVC pattern is used in conjunction with the database ?",
+    "desc": "",
+    "answer": {
+      "q9a": { "label": "Model", "valid": true },
+      "q9b": { "label": "Schema", "valid": false },
+      "q9c": { "label": "Validation", "valid": false },
+      "q9d": { "label": "Controller", "valid": false },
+      "q9e": { "label": "View", "valid": false },
+      "q9f": { "label": "Template", "valid": false }
+    }
+  },
+  "q10": {
+    "title": "Which operator is used to test if two values are identical in every way ?",
+    "desc": "",
+    "answer": {
+      "q10a": { "label": "!==", "valid": false },
+      "q10b": { "label": "InstanceOf", "valid": false },
+      "q10c": { "label": "=", "valid": false },
+      "q10d": { "label": "==", "valid": false },
+      "q10e": { "label": "===", "valid": true }
+    }
+  },
+  "q11": {
+    "title": "Which keyword is used to block any overriding of a class/method by a subclass ?",
+    "desc": "",
+    "answer": {
+      "q11a": { "label": "static", "valid": false },
+      "q11b": { "label": "interface", "valid": false },
+      "q11c": { "label": "final", "valid": true },
+      "q11d": { "label": "private", "valid": false },
+      "q11e": { "label": "None of the above", "valid": false }
+    }
+  },
+  "q12": {
+    "title": "Which problem \"namespaces\" are designed to solved ?",
+    "desc": "",
+    "answer": {
+      "q12a": {
+        "label": "Improve performance of class/function/constants",
+        "valid": false
+      },
+      "q12b": {
+        "label": "Improve security of class/function/constants",
+        "valid": false
+      },
+      "q12c": {
+        "label": "Avoid collisions between code you create, internal or third parties code",
+        "valid": true
+      },
+      "q12d": {
+        "label": "Replace usage of autoload and spl_autoload functions",
+        "valid": false
+      },
+      "q12e": {
+        "label": "Ability to shorten long names and improve readibility",
+        "valid": true
+      }
+    }
+  }
+}

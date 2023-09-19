@@ -1,5 +1,11 @@
 <?php 
+/**
+ * 
+ * 
+ */
 class form{
+   
+   
     const LEVEL_JUNIOR = 1;
     const LEVEL_SENIOR = 2;
     const LEVEL_EXPERT = 3;
@@ -11,6 +17,16 @@ class form{
     public $m_iTotalWrong = 0;
 
     protected $m_aStack = array('php', 'react-native') ;     
+    protected $m_sStack ;
+    protected $m_aQuestion ;
+
+    public function __construct(){
+        if( TRUE == isset($_GET['stack']) && TRUE == in_array($_GET['stack'], $this->m_aStack)){
+            $this->m_sStack = (string)$_GET['stack'] ;
+        }else{
+            $this->m_sStack = $this->m_aStack[0] ;
+        }
+    }
 
     public function checkForm(){
         $l_aQuestion = $this->getForm();
@@ -77,15 +93,9 @@ class form{
      * https://docs.guzzlephp.org/en/stable/quickstart.html
      */
     public function getForm(){
-        
-        if( TRUE == isset($_GET['stack']) && 
-            TRUE == in_array($_GET['stack'], $this->m_aStack) &&
-            TRUE == file_exists('../model/quiz_'.$_GET['stack'].'.php') ){
-            require_once('quiz_'.$_GET['stack'].'.php') ;
-        }else{
-            require_once('quiz_php.php') ;
-        }
-        
-        return $l_aQuiz;
+
+        $l_sFile = '../model/quiz_'.$this->m_sStack.'.json' ;
+        $this->m_aQuestion = json_decode(file_get_contents($l_sFile),true) ;
+        return $this->m_aQuestion ;
     }
 }

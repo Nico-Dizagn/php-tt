@@ -10,9 +10,9 @@
     // Controller
     public function __construct(){
         require_once('../model/form.php');
-        $this->m_oForm = new Form();
+        $this->m_oForm = new form();
         
-        // 
+        // On traite les reponses au formulaire
         if($_SERVER['REQUEST_METHOD'] == "POST"){
             if(TRUE == $this->m_oForm->checkForm()){
                 $this->m_oForm->score($_POST['level']);
@@ -65,7 +65,7 @@
             <p>Welcome to this technical test for developers of all levels. Several skills will be tested about core, object, server and more.</p>
             <p>Each correct answer earns point and each wrong remove. Multiple answers allowed for each question.</p>
         </div>
-        <form action="index.php" method="POST" id="test">
+        <form action="" method="POST" id="test">
         ';
 
         if($this->m_sStep == 2){
@@ -83,8 +83,9 @@
         }
         $l_sString .=
         '<h2>Choose your XP level</h2>'.$this->getLevel();
-        
+
         foreach($this->m_oForm->getForm() AS $l_aQuestion){
+            
             $l_sString .='
             <div class="question">
                 <fieldset>
