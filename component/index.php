@@ -54,17 +54,16 @@
         $l_sString =  
 '<html>
         <head>
-            <title>Test technique PHP</title>
+            <title>Technical test</title>
             <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
             <script src="js/script.js"></script>
         </head>
     <body>
     <div id="main">
-        <h1>Technical test PHP '.date('Y').'</h1>
+        <h1>Technical test  '.date('Y').'</h1>
         <div id="intro">
-            <p>Welcome to this PHP technical test for developers of all levels. Several skills will be tested about PHP core, object, server and more.</p>
-            <p>Each correct answer earns point and each wrong remove. Multiple answers allowed.
-             for each question.</p>
+            <p>Welcome to this technical test for developers of all levels. Several skills will be tested about core, object, server and more.</p>
+            <p>Each correct answer earns point and each wrong remove. Multiple answers allowed for each question.</p>
         </div>
         <form action="index.php" method="POST" id="test">
         ';
