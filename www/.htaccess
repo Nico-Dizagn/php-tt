@@ -2,6 +2,7 @@
     RewriteEngine on    
 
     RewriteRule "^/php$" "/index.php" 
+    RewriteRule "^/react-native$" "/index.php?stack=react-native" 
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,1 +1,146 @@
-{"q0":{"title":"What is a good use case for using a function while rendering a dynamic list of items ?","desc":"","answer":{"q0a":{"label":"If we need to compute a value based on properties of items in the loop.","valid":true},"q0b":{"label":"None. Functions should not be used while rendering a dynamic list.","valid":false},"q0c":{"label":"To make the code shorter","valid":false}}},"q1":{"title":"What is the second argument for setState useful for ?","desc":"","answer":{"q1a":{"label":"To invoke code after the setState operation is done","valid":true},"q1b":{"label":"To replace the state completely instead of the default merge action","valid":false},"q1c":{"label":"To access the previous state before the setState operation","valid":false}}},"q2":{"title":"Which of the following below act as the input of a class-based component ?","desc":"","answer":{"q2a":{"label":"class and factory","valid":false},"q2b":{"label":"render and mount","valid":false},"q2c":{"label":"props","valid":true}}},"q3":{"title":"What can be used as a container that supports layout with flexbox in React Native ?","desc":"","answer":{"q3a":{"label":"<text>","valid":false},"q3b":{"label":"<view>","valid":true},"q3c":{"label":"<image>","valid":false},"q3d":{"label":"<ScrollView>","valid":false}}},"q4":{"title":"Name the Hook that lets a component receive information from distant parents without passing it as props","desc":"","answer":{"q4a":{"label":"useProps","valid":false},"q4b":{"label":"useState","valid":false},"q4c":{"label":"useContext","valid":true},"q4d":{"label":"useReducer","valid":false}}},"q5":{"title":"Which component is used for Rendering a long list of Data in React Native ?","desc":"","answer":{"q5a":{"label":"List","valid":false},"q5b":{"label":"FlatList","valid":true},"q5c":{"label":"ScrollViewList","valid":false},"q5d":{"label":"SectionList","valid":true}}},"q6":{"title":"Which module in React Native detects the platform in which the app is running ?","desc":"","answer":{"q6a":{"label":"PlatformDetect","valid":false},"q6b":{"label":"Engine","valid":false},"q6c":{"label":"Platform","valid":true},"q6d":{"label":"codeDetect","valid":false}}},"q7":{"title":"Which of the following way is used to add a static image to your React Native app ?","desc":"","answer":{"q7a":{"label":"<image source={require('.\/my-icon.png')} \/>","valid":false},"q7b":{"label":"<Img source={require('.\/my-icon.png')} \/>","valid":false},"q7c":{"label":"<Image source={require('.\/my-icon.png')} \/>","valid":true},"q7d":{"label":"<img source={require('.\/my-icon.png')} \/>","valid":false}}},"q8":{"title":"Which is a component that can detect various stages of press interactions ?","desc":"","answer":{"q8a":{"label":"PressComponent","valid":false},"q8b":{"label":"Pressable","valid":true},"q8c":{"label":"TouchHandle","valid":false},"q8d":{"label":"Touchable","valid":false}}},"q9":{"title":"Which of the following is not a property of Flex box ?","desc":"","answer":{"q9a":{"label":"flexDirection","valid":false},"q9b":{"label":"alignItems","valid":false},"q9c":{"label":"justifyContent","valid":false},"q9d":{"label":"justifySpacing","valid":true}}},"q10":{"title":"Which of the following is used to align UI elements on the LEFT side of a container ?","desc":"","answer":{"q10a":{"label":"{Float: left;}","valid":false},"q10b":{"label":"{display: block; Float: left;}","valid":false},"q10c":{"label":"{align-content: left;}","valid":false},"q10d":{"label":"{justify-content: left;}","valid":true}}},"q11":{"title":"Which of the following can't be used in stylesheet ?","desc":"","answer":{"q11a":{"label":"box-shadow","valid":true},"q11b":{"label":"Float","valid":true},"q11c":{"label":"position: fixed","valid":true},"q11d":{"label":"vh, vw, px","valid":true}}}}
+{
+  "q0": {
+    "title": "What is a good use case for using a function while rendering a dynamic list of items ?",
+    "desc": "",
+    "answer": {
+      "q0a": {
+        "label": "If we need to compute a value based on properties of items in the loop.",
+        "valid": true
+      },
+      "q0b": {
+        "label": "None. Functions should not be used while rendering a dynamic list.",
+        "valid": false
+      },
+      "q0c": { "label": "To make the code shorter", "valid": false }
+    }
+  },
+  "q1": {
+    "title": "What is the second argument for setState useful for ?",
+    "desc": "",
+    "answer": {
+      "q1a": {
+        "label": "To invoke code after the setState operation is done",
+        "valid": true
+      },
+      "q1b": {
+        "label": "To replace the state completely instead of the default merge action",
+        "valid": false
+      },
+      "q1c": {
+        "label": "To access the previous state before the setState operation",
+        "valid": false
+      }
+    }
+  },
+  "q2": {
+    "title": "Which of the following below act as the input of a class-based component ?",
+    "desc": "",
+    "answer": {
+      "q2a": { "label": "class and factory", "valid": false },
+      "q2b": { "label": "render and mount", "valid": false },
+      "q2c": { "label": "props", "valid": true }
+    }
+  },
+  "q3": {
+    "title": "What can be used as a container that supports layout with flexbox in React Native ?",
+    "desc": "",
+    "answer": {
+      "q3a": { "label": "<text>", "valid": false },
+      "q3b": { "label": "<view>", "valid": true },
+      "q3c": { "label": "<image>", "valid": false },
+      "q3d": { "label": "<ScrollView>", "valid": false }
+    }
+  },
+  "q4": {
+    "title": "Name the Hook that lets a component receive information from distant parents without passing it as props",
+    "desc": "",
+    "answer": {
+      "q4a": { "label": "useProps", "valid": false },
+      "q4b": { "label": "useState", "valid": false },
+      "q4c": { "label": "useContext", "valid": true },
+      "q4d": { "label": "useReducer", "valid": false }
+    }
+  },
+  "q5": {
+    "title": "Which component is used for Rendering a long list of Data in React Native ?",
+    "desc": "",
+    "answer": {
+      "q5a": { "label": "List", "valid": false },
+      "q5b": { "label": "FlatList", "valid": true },
+      "q5c": { "label": "ScrollViewList", "valid": false },
+      "q5d": { "label": "SectionList", "valid": true }
+    }
+  },
+  "q6": {
+    "title": "Which module in React Native detects the platform in which the app is running ?",
+    "desc": "",
+    "answer": {
+      "q6a": { "label": "PlatformDetect", "valid": false },
+      "q6b": { "label": "Engine", "valid": false },
+      "q6c": { "label": "Platform", "valid": true },
+      "q6d": { "label": "codeDetect", "valid": false }
+    }
+  },
+  "q7": {
+    "title": "Which of the following way is used to add a static image to your React Native app ?",
+    "desc": "",
+    "answer": {
+      "q7a": {
+        "label": "<image source={require('./my-icon.png')} />",
+        "valid": false
+      },
+      "q7b": {
+        "label": "<Img source={require('./my-icon.png')} />",
+        "valid": false
+      },
+      "q7c": {
+        "label": "<Image source={require('./my-icon.png')} />",
+        "valid": true
+      },
+      "q7d": {
+        "label": "<img source={require('./my-icon.png')} />",
+        "valid": false
+      }
+    }
+  },
+  "q8": {
+    "title": "Which is a component that can detect various stages of press interactions ?",
+    "desc": "",
+    "answer": {
+      "q8a": { "label": "PressComponent", "valid": false },
+      "q8b": { "label": "Pressable", "valid": true },
+      "q8c": { "label": "TouchHandle", "valid": false },
+      "q8d": { "label": "Touchable", "valid": false }
+    }
+  },
+  "q9": {
+    "title": "Which of the following is not a property of Flex box ?",
+    "desc": "",
+    "answer": {
+      "q9a": { "label": "flexDirection", "valid": false },
+      "q9b": { "label": "alignItems", "valid": false },
+      "q9c": { "label": "justifyContent", "valid": false },
+      "q9d": { "label": "justifySpacing", "valid": true }
+    }
+  },
+  "q10": {
+    "title": "Which of the following is used to align UI elements on the LEFT side of a container ?",
+    "desc": "",
+    "answer": {
+      "q10a": { "label": "{Float: left;}", "valid": false },
+      "q10b": { "label": "{display: block; Float: left;}", "valid": false },
+      "q10c": { "label": "{align-content: left;}", "valid": false },
+      "q10d": { "label": "{justify-content: left;}", "valid": true }
+    }
+  },
+  "q11": {
+    "title": "Which of the following can't be used in stylesheet ?",
+    "desc": "",
+    "answer": {
+      "q11a": { "label": "box-shadow", "valid": true },
+      "q11b": { "label": "Float", "valid": true },
+      "q11c": { "label": "position: fixed", "valid": true },
+      "q11d": { "label": "vh, vw, px", "valid": true }
+    }
+  }
+}
